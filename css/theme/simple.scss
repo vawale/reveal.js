@@ -8,6 +8,7 @@
 
 
 // Default mixins and settings -----------------
+@use "sass:color";
 @import "./template/mixins";
 @import "./template/settings";
 // ---------------------------------------------
@@ -15,8 +16,8 @@
 
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic");
 
 
 // Override theme settings (see ../template/settings.scss)
@@ -28,7 +29,7 @@ $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
 $linkColor: #00008B;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: color.scale( $linkColor, $lightness: 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 $overlayElementBgColor: 0, 0, 0;
