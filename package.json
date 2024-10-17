@@ -47,7 +47,7 @@
     "dev": "vite --port 8000",
     "build:core": "tsc && vite build && vite build -c vite.config.styles.ts",
     "build": "tsc && vite build && vite build -c vite.config.styles.ts && vite build -c plugin/highlight/vite.config.ts && vite build -c plugin/markdown/vite.config.ts && vite build -c plugin/math/vite.config.ts && vite build -c plugin/notes/vite.config.ts && vite build -c plugin/search/vite.config.ts && vite build -c plugin/zoom/vite.config.ts",
-    "test": "gulp test",
+    "test": "node test.cjs",
     "start": "vite --port 8000"
   },
   "author": {
@@ -90,7 +90,7 @@
     "gulp-zip": "^5.1.0",
     "highlight.js": "^11.9.0",
     "marked": "^4.3.0",
-    "node-qunit-puppeteer": "^2.1.2",
+    "node-qunit-puppeteer": "^2.2.0",
     "qunit": "^2.20.0",
     "rollup": "^4.1.5",
     "sass": "^1.69.5",
